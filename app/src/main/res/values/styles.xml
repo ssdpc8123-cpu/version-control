@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LockKey">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/lock_key_tint</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <!-- 3D-like text via shadow -->
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">2.0</item>
+        <item name="android:shadowRadius">4.0</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lock_bg">
+
+    
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="12dp">
+
+    <!-- Top brand/title -->
+    <TextView
+        android:id="@+id/tvBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APT SECURITY"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/lock_text_primary"
+        android:shadowColor="#66000000"
+        android:shadowDx="0.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="4.0"
+        android:layout_marginTop="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"/>
+
+    <!-- Spacer: push content down so time/dots appear near bottom -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"/>
+
+    <!-- Bottom info (dots + time/date) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="6dp"
+        android:layout_marginBottom="6dp">
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm a"
+            android:format24Hour="HH:mm"
+            android:textColor="@color/lock_text_primary"
+            android:textSize="64sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tvPinDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lock_text_primary"
+            android:textSize="26sp"
+            android:text="••••"
+            android:paddingTop="2dp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lock_text_secondary"
+            android:textSize="12sp"
+            android:text=""
+            android:paddingBottom="6dp"/>
+        </LinearLayout>
+
+        <!-- Keypad bottom half -->
+        <LinearLayout
+            android:id="@+id/keypadCard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.25"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <GridLayout
+                android:id="@+id/keypadGrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="3"
+                android:rowCount="4"
+                android:useDefaultMargins="true">
+
+            <Button android:id="@+id/btn1" style="@style/LockKey" android:text="1"/>
+            <Button android:id="@+id/btn2" style="@style/LockKey" android:text="2"/>
+            <Button android:id="@+id/btn3" style="@style/LockKey" android:text="3"/>
+
+            <Button android:id="@+id/btn4" style="@style/LockKey" android:text="4"/>
+            <Button android:id="@+id/btn5" style="@style/LockKey" android:text="5"/>
+            <Button android:id="@+id/btn6" style="@style/LockKey" android:text="6"/>
+
+            <Button android:id="@+id/btn7" style="@style/LockKey" android:text="7"/>
+            <Button android:id="@+id/btn8" style="@style/LockKey" android:text="8"/>
+            <Button android:id="@+id/btn9" style="@style/LockKey" android:text="9"/>
+
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn0" style="@style/LockKey" android:text="0"/>
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
